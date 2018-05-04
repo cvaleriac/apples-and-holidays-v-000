@@ -49,7 +49,7 @@ def all_supplies_in_holidays(holiday_hash)
      holiday.each do |holiday, item|
        puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
      end
-  end 
+  end
 
 end
 
@@ -57,6 +57,6 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.map do |season, holiday|
     holiday.map do |holiday, item|
       holiday if item.include?("BBQ")
-    end 
+    end
   end.flatten.compact
 end
